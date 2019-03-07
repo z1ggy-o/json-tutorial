@@ -36,7 +36,6 @@ static int lept_parse_literal(lept_context *c, lept_value *v, const char *litera
 #define ISDIGIT(ch) ((ch) >= '0' && (ch) <= '9')
 #define ISDIGIT1TO9(ch)  ((ch) >= '1' && (ch) <= '9')
 
-/* This function can not be used */
 static int is_valid_number(const char *s)
 {
     const char *sp = s;
@@ -52,7 +51,6 @@ static int is_valid_number(const char *s)
         
         while(ISDIGIT(*++sp))
             ;        
-        
         #endif
 
         for (sp++; ISDIGIT(*sp); sp++);
